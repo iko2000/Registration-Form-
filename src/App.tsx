@@ -3,21 +3,17 @@ import { useForm } from "react-hook-form";
 
 import imageError from "./assets/images/icon-error.svg";
 
-interface regist {
-  register: any;
-  handleChange: any;
-}
+
 
 function App() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data: any) => console.log("DATA", data);
-  const [color, setColor] = useState("black");
+  
   return (
     <>
       <div className="box">
@@ -40,7 +36,7 @@ function App() {
               </p>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div style={{ border: `1px solid ${color}` }} className="floor">
+              <div className="floor">
                 <input
                   placeholder="Name"
                   {...register("Name", {
@@ -66,7 +62,7 @@ function App() {
                 <p className="error"> Too Short Name</p>
               )}
 
-              <div style={{ border: `1px solid ${color}` }} className="floor">
+              <div className="floor">
                 <input
                   placeholder="LastName"
                   {...register("Lastname", {
@@ -91,7 +87,7 @@ function App() {
                 <p className="error"> Too Short Last Name</p>
               )}
 
-              <div style={{ border: `1px solid ${color}` }} className="floor">
+              <div  className="floor">
                 <input
                   placeholder="Email"
                   {...register("Email", {
@@ -109,7 +105,7 @@ function App() {
                 <p className="error">Email has to be filled</p>
               )}
 
-              <div style={{ border: `1px solid ${color}` }} className="floor">
+              <div  className="floor">
                 <input
                   placeholder="Password"
                   {...register("Password", {
