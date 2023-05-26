@@ -94,6 +94,8 @@ p {
 }
 .head p {
   color: white;
+  font-size: 12px;
+  
 }
 
 .head span {
@@ -151,6 +153,7 @@ form span {
   width: 85%;
   height: 80%;
   border: none;
+  border: 1px dashed black;
  
 }
 
